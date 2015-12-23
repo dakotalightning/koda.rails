@@ -14,7 +14,7 @@ User.create!({
   first_name: "Dakota",
   last_name: "Lightning",
   email: "dakota@animikii.com",
-  username: "dakotalightning",
-  password: "dakotalightning",
-  password_confirmation: "dakotalightning"
+  username: "dakota",
+  password: "dakota",
+  password_confirmation: "dakota"
 })
