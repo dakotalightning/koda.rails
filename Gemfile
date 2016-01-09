@@ -21,6 +21,7 @@ gem 'email_validator'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass'
 gem 'sweet-alert-confirm' # sweet alert confirm, pipline use for sweet alerts
+gem 'codemirror-rails'
 # Bower components - gem 'rails-assets-BOWER_PACKAGE_NAME'
 source 'https://rails-assets.org' do
   gem 'rails-assets-sweetalert'
