@@ -46,6 +46,9 @@
               <li>
                 <%= link_to t(".sign_out"), sign_out_path, method: :delete %>
               </li>
+              <% if current_user.is_admin %>
+                <%= link_to_in_li "Admin", admin_root_path %>
+              <% end %>
             <% else %>
               <li>
                 <%= link_to t(".sign_in"), sign_in_path %>
