@@ -16,30 +16,30 @@
 //= require turbolinks
 //= require sweetalert
 //= require marked
+//= require codemirror
+//= require codemirror/modes/markdown
 //= require sweet-alert-confirm
 //= require bootstrap-sprockets
-
-//= require react
-//= require react_ujs
-//= require components
-
-
 
 $(document).on('ready page:load', function() {
   marked.setOptions({
     gfm: true,
     tables: true,
-    pedantic: false,
-    sanitize: false,
+    pedantic: true,
+    sanitize: true,
     smartLists: true,
-    smartypants: false,
+    smartypants: true,
     langPrefix: 'lang-'
   });
-
-  function updateMarkdown() {
-    $('#markdown').html(marked($('#page_content').val()));
-  }
+  var page_content = CodeMirror.fromTextArea(document.getElementById("page_content"),{
+    lineNumbers: true,
+    mode: "markdown",
+    viewportMargin: Infinity,
+    lineWrapping: true
+  });
+  page_content.on("change", updateMarkdown);
   updateMarkdown();
-  $('#page_content').keypress(updateMarkdown);
-  $('#page_content').on('input propertychange paste', updateMarkdown);
+  function updateMarkdown() {
+    $('#markdown').html(marked(page_content.getValue()));
+  }
 });
