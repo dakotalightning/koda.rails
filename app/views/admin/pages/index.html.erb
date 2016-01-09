@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1>Pages</h1>
+  <%= link_to "Create a Page", new_admin_page_path, class:"btn btn-success" %>
+</div>
+
+<section class="row">
+  <div class="col-md-12">
+    <%= render partial: "admin/pages/list", locals: { pages: @pages }  %>
+  </div>
+</section>
