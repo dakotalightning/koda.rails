@@ -1,3 +1,5 @@
+require 'constraints/page'
+
 Rails.application.routes.draw do
 
   namespace :admin do
@@ -5,6 +7,8 @@ Rails.application.routes.draw do
 
     root to: "base#dashboard"
   end
+
+  get '/:page' => 'pages#show', constraints: Constraints::Page.new, as: :page
 
   resources :passwords, only: [:create, :new]
   resource :session, except: [:destroy]

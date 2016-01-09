@@ -28,3 +28,13 @@ User.create!({
   password_confirmation: "dakota",
   is_admin: true
 })
+
+Page.create!({
+  title: "About",
+  content: "Hello this is a about page",
+})
+
+Page.create!({
+  title: "Content",
+  content: "Hello this is a Contact page",
+})
