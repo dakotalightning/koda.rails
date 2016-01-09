@@ -20,6 +20,10 @@
 //= require sweet-alert-confirm
 //= require bootstrap-sprockets
 
+//= require react
+//= require react_ujs
+//= require components
+
 $(document).on('ready page:load', function() {
   marked.setOptions({
     gfm: true,
