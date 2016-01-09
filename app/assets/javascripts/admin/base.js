@@ -33,7 +33,13 @@ $(document).on('ready page:load', function() {
     sanitize: false,
     smartLists: true,
     smartypants: false,
+    langPrefix: 'lang-'
   });
 
-  document.getElementById('markdown').innerHTML = document.getElementById('page_content').innerHTML);
+  function updateMarkdown() {
+    $('#markdown').html(marked($('#page_content').val()));
+  }
+  updateMarkdown();
+  $('#page_content').keypress(updateMarkdown);
+  $('#page_content').on('input propertychange paste', updateMarkdown);
 });
