@@ -8,7 +8,7 @@
       <tbody>
         <% pages.each do |page| %>
           <tr>
-            <td><%= link_to page.title, admin_page_path(page) %></td>
+            <td><%= link_to page.title, edit_admin_page_path(page) %></td>
             <td>
               <%= link_to "Edit", edit_admin_page_path(page), class: "btn btn-info btn-sm" %>
               <%= link_to "Delete", admin_page_path(page), class: "btn btn-danger btn-sm", method: :delete, data: { confirm: "Are you sure?" }  %>
