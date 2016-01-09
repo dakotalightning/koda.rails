@@ -10,6 +10,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :confirmation_token, limit: 128
       t.string :remember_token, limit: 128, null: false
 
+      t.boolean :is_admin, default: false, null: false
+
       t.index :username
       t.index :email
       t.index :remember_token
