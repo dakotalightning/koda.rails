@@ -21,12 +21,10 @@ gem 'email_validator'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass'
 gem 'sweet-alert-confirm' # sweet alert confirm, pipline use for sweet alerts
-gem 'react-rails', '~> 1.5.0'
 # Bower components - gem 'rails-assets-BOWER_PACKAGE_NAME'
 source 'https://rails-assets.org' do
   gem 'rails-assets-sweetalert'
   gem 'rails-assets-marked'
-  gem 'rails-assets-highlightjs'
   gem 'rails-assets-outdated-browser'
 end
 group :production do

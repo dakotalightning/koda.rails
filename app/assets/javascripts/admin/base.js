@@ -15,7 +15,6 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require sweetalert
-//= require highlightjs
 //= require marked
 //= require sweet-alert-confirm
 //= require bootstrap-sprockets
@@ -23,6 +22,8 @@
 //= require react
 //= require react_ujs
 //= require components
+
+
 
 $(document).on('ready page:load', function() {
   marked.setOptions({
@@ -32,10 +33,6 @@ $(document).on('ready page:load', function() {
     sanitize: false,
     smartLists: true,
     smartypants: false,
-    langPrefix: 'lang-',
-    highlight: function (code) {
-        return hljs.highlightAuto(code).value;
-    }
   });
 
   document.getElementById('markdown').innerHTML = document.getElementById('page_content').innerHTML);
