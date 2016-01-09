@@ -26,6 +26,7 @@ gem 'sweet-alert-confirm' # sweet alert confirm, pipline use for sweet alerts
 source 'https://rails-assets.org' do
   gem 'rails-assets-sweetalert'
   gem 'rails-assets-marked'
+  gem 'rails-assets-highlightjs'
   gem 'rails-assets-outdated-browser'
 end
 group :production do
