@@ -22,24 +22,27 @@
 //= require bootstrap-sprockets
 
 $(document).on('ready page:load', function() {
-  marked.setOptions({
-    gfm: true,
-    tables: true,
-    pedantic: true,
-    sanitize: true,
-    smartLists: true,
-    smartypants: true,
-    langPrefix: 'lang-'
-  });
-  var page_content = CodeMirror.fromTextArea(document.getElementById("page_content"),{
-    lineNumbers: true,
-    mode: "markdown",
-    viewportMargin: Infinity,
-    lineWrapping: true
-  });
-  page_content.on("change", updateMarkdown);
-  updateMarkdown();
-  function updateMarkdown() {
-    $('#markdown').html(marked(page_content.getValue()));
+
+  if($("#page_content").length !== 0){
+    marked.setOptions({
+      gfm: true,
+      tables: true,
+      pedantic: true,
+      sanitize: true,
+      smartLists: true,
+      smartypants: true,
+      langPrefix: 'lang-'
+    });
+    var page_content = CodeMirror.fromTextArea(document.getElementById("page_content"),{
+      lineNumbers: true,
+      mode: "markdown",
+      viewportMargin: Infinity,
+      lineWrapping: true
+    });
+    page_content.on("change", updateMarkdown);
+    updateMarkdown();
+    function updateMarkdown() {
+      $('#markdown').html(marked(page_content.getValue()));
+    }
   }
 });
