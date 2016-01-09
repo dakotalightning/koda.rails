@@ -18,6 +18,8 @@
  @import "bootstrap";
  @import "theme/bootswatch";
 
+ @import "components/footer";
+
  .alert-notice {
    @extend .alert-info;
  }
