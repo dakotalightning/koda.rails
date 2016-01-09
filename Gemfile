@@ -25,6 +25,7 @@ gem 'sweet-alert-confirm' # sweet alert confirm, pipline use for sweet alerts
 # Bower components - gem 'rails-assets-BOWER_PACKAGE_NAME'
 source 'https://rails-assets.org' do
   gem 'rails-assets-sweetalert'
+  gem 'rails-assets-marked'
   gem 'rails-assets-outdated-browser'
 end
 group :production do
