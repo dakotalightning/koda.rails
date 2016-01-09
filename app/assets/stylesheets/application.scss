@@ -14,7 +14,9 @@
  //*= require sweetalert
 
  @import "bootstrap-sprockets";
+ @import "theme/variables";
  @import "bootstrap";
+ @import "theme/bootswatch";
 
  .alert-notice {
    @extend .alert-info;
