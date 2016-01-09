@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :users, except: [:show]
+
+    root to: "base#dashboard"
+  end
+
   resources :passwords, only: [:create, :new]
   resource :session, except: [:destroy]
 

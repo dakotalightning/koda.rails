@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 private
 
   def require_admin
-    unless signed_in?
+    unless signed_in? && current_user.is_admin?
       deny_access
     end
   end
