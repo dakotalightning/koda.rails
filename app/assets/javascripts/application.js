@@ -12,11 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
-//= require_tree .
-
+//= require sweetalert
+//= require sweet-alert-confirm
 //= require bootstrap-sprockets
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
+$(document).on('ready page:load', function() {
+
+});
